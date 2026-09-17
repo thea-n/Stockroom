@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Office Printer Paper",
+    "category": "Office",
+    "quantity": 24,
+    "unit": "packs",
+    "reorderLevel": 12,
+    "vendor": "Northwind Office",
+    "productUrl": "https://example.com/products/printer-paper",
+    "lastUpdated": "2026-09-17",
+    "reminder": "Order before Friday"
+  },
+  {
+    "id": "2",
+    "name": "Tissue box",
+    "category": "Bathroom",
+    "quantity": 4,
+    "unit": "boxes",
+    "reorderLevel": 10,
+    "vendor": "Staples",
+    "productUrl": "https://example.com/products/usbc-dock",
+    "lastUpdated": "2026-09-17",
+    "reminder": "Check replacement stock"
+  },
+  {
+    "id": "3",
+    "name": "Safety Gloves",
+    "category": "Safety",
+    "quantity": 18,
+    "unit": "boxes",
+    "reorderLevel": 10,
+    "vendor": "Hill & Harbor Safety",
+    "productUrl": "https://example.com/products/safety-gloves",
+    "lastUpdated": "2026-09-15",
+    "reminder": "Restock before next audit"
+  }
+]

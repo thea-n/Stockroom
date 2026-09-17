@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stockroom</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Operations</p>
+          <h1>Stockroom</h1>
+        </div>
+        <button id="new-item-btn" class="primary-btn" type="button">Add item</button>
+      </header>
+
+      <main>
+        <div class="workspace-grid">
+          <aside class="panel sidebar">
+            <div class="section-heading">
+              <h2>Categories</h2>
+            </div>
+            <ul id="category-list" class="category-list"></ul>
+          </aside>
+
+          <div class="content-panel">
+            <section class="summary-grid">
+              <article class="summary-card">
+                <span>Total Items</span>
+                <strong id="total-items">0</strong>
+              </article>
+              <article class="summary-card warning">
+                <span>Low Stock</span>
+                <strong id="low-stock">0</strong>
+              </article>
+              <article class="summary-card neutral">
+                <span>Reminders</span>
+                <strong id="reminder-count">0</strong>
+              </article>
+            </section>
+
+            <section id="form-panel" class="panel hidden">
+              <h2 id="form-title">Add inventory item</h2>
+              <form id="item-form">
+                <input type="hidden" id="item-id" />
+                <div class="field-grid">
+                  <label>
+                    Name
+                    <input id="name" name="name" type="text" required />
+                  </label>
+                  <label>
+                    Category
+                    <input id="category" name="category" type="text" required />
+                  </label>
+                  <label>
+                    Quantity
+                    <input id="quantity" name="quantity" type="number" min="0" required />
+                  </label>
+                  <label>
+                    Unit
+                    <input id="unit" name="unit" type="text" value="units" />
+                  </label>
+                  <label>
+                    Reorder level
+                    <input id="reorderLevel" name="reorderLevel" type="number" min="0" required />
+                  </label>
+                  <label>
+                    Vendor
+                    <input id="vendor" name="vendor" type="text" required />
+                  </label>
+                  <label class="wide">
+                    Product link
+                    <input id="productUrl" name="productUrl" type="url" placeholder="https://" />
+                  </label>
+                  <label class="wide">
+                    Reminder
+                    <input id="reminder" name="reminder" type="text" placeholder="Restock before Friday" />
+                  </label>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="primary-btn">Save item</button>
+                  <button id="cancel-btn" type="button" class="secondary-btn">Cancel</button>
+                </div>
+              </form>
+            </section>
+
+            <section class="panel">
+              <div class="section-heading">
+                <h2>Inventory</h2>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Category</th>
+                      <th>Qty</th>
+                      <th>Vendor</th>
+                      <th>Reminder</th>
+                      <th>Link</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="inventory-body"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
